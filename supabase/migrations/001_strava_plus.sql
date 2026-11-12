@@ -15,6 +15,19 @@ create table if not exists public.profiles (
   created_at timestamptz not null default now()
 );
 
+-- gear must be created before activities: activities.gear_id references it.
+create table if not exists public.gear (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles (id) on delete cascade,
+  name text not null,
+  type text not null,
+  brand text,
+  model text,
+  distance_m integer not null default 0,
+  retire_at_m integer,
+  created_at timestamptz not null default now()
+);
+
 create table if not exists public.activities (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles (id) on delete cascade,
@@ -144,18 +157,6 @@ create table if not exists public.goals (
   target numeric not null,
   unit text not null,
   period text not null check (period in ('week', 'month')),
-  created_at timestamptz not null default now()
-);
-
-create table if not exists public.gear (
-  id uuid primary key default gen_random_uuid(),
-  user_id uuid not null references public.profiles (id) on delete cascade,
-  name text not null,
-  type text not null,
-  brand text,
-  model text,
-  distance_m integer not null default 0,
-  retire_at_m integer,
   created_at timestamptz not null default now()
 );
 
