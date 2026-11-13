@@ -122,3 +122,8 @@ supabase/migrations/001_strava_plus.sql
   Only owners can edit or delete their own rows.
 - The `anon` key is public by design. Never put the Supabase `service_role` key in this
   app or in any client-side code.
+
+## Production
+
+Live at https://cadence-chi-bice.vercel.app (Vercel, Hobby). Vercel deploys
+automatically on every push to `main`.
