@@ -83,19 +83,19 @@ export default function App() {
   const [profile, setProfile] = useState<Profile | null>(null)
   const [authReady, setAuthReady] = useState(false)
   const [theme, setTheme] = useState<'light' | 'dark'>(
-    (localStorage.getItem('sp-theme') as 'light' | 'dark') || 'light',
+    (localStorage.getItem('cadence-theme') as 'light' | 'dark') || 'dark',
   )
-  const [unit, setUnit] = useState<Unit>((localStorage.getItem('sp-unit') as Unit) || 'km')
+  const [unit, setUnit] = useState<Unit>((localStorage.getItem('cadence-unit') as Unit) || 'mi')
 
   const beaconId = new URLSearchParams(window.location.search).get('beacon')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('sp-theme', theme)
+    localStorage.setItem('cadence-theme', theme)
   }, [theme])
 
   useEffect(() => {
-    localStorage.setItem('sp-unit', unit)
+    localStorage.setItem('cadence-unit', unit)
   }, [unit])
 
   useEffect(() => {

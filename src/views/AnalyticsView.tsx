@@ -30,7 +30,7 @@ function Ring({ pct, label }: { pct: number; label: string }) {
           cy="60"
           r={r}
           fill="none"
-          stroke="#fc4c02"
+          stroke="#0089ff"
           strokeWidth="10"
           strokeLinecap="round"
           strokeDasharray={c}

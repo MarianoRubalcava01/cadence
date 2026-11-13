@@ -131,7 +131,7 @@ export default function GearView({ userId, unit }: Props) {
             </p>
             {g.retire_at_m && (
               <>
-                <div className="progress"><div style={{ width: `${pct}%`, background: due ? '#dc2626' : '#fc4c02' }} /></div>
+                <div className="progress"><div style={{ width: `${pct}%`, background: due ? '#dc2626' : '#0089ff' }} /></div>
                 {due && <p style={{ color: '#dc2626', fontWeight: 700, margin: '8px 0 0' }}>Time to retire — this gear has reached its limit.</p>}
                 {!due && pct > 80 && <p style={{ color: '#d97706', fontWeight: 700, margin: '8px 0 0' }}>Getting close to retirement ({Math.round(pct)}%).</p>}
               </>

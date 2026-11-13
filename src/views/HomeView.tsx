@@ -19,7 +19,7 @@ function MiniRing({ pct }: { pct: number }) {
     <div className="ring">
       <svg width="120" height="120" viewBox="0 0 120 120">
         <circle cx="60" cy="60" r={r} fill="none" stroke="var(--border)" strokeWidth="10" />
-        <circle cx="60" cy="60" r={r} fill="none" stroke="#fc4c02" strokeWidth="10" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - shown / 100)} />
+        <circle cx="60" cy="60" r={r} fill="none" stroke="#0089ff" strokeWidth="10" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - shown / 100)} />
       </svg>
       <div className="ring-label">
         <span className="pct">{Math.round(pct)}%</span>

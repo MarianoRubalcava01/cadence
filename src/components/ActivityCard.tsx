@@ -190,7 +190,7 @@ export default function ActivityCard({ activity, currentUserId, unit, onChanged,
         {activity.location ? ` · ${activity.location}` : ''}
       </div>
       <div className="row" style={{ marginTop: 12 }}>
-        <button className={`icon-btn ${gaveKudos ? 'active' : ''}`} onClick={toggleKudos} style={gaveKudos ? { background: '#fc4c02', color: '#fff', borderColor: '#fc4c02' } : undefined}>
+        <button className={`icon-btn ${gaveKudos ? 'active' : ''}`} onClick={toggleKudos} style={gaveKudos ? { background: '#0089ff', color: '#fff', borderColor: '#0089ff' } : undefined}>
           👍 Kudos · {kudos}
         </button>
         <button className="icon-btn" onClick={() => setShowComments((v) => !v)}>

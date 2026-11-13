@@ -413,7 +413,7 @@ export default function RecordView({ userId, unit, onSaved }: Props) {
               <strong style={{ fontSize: 18 }}>{sport}</strong>
               <span className="muted small" style={{ marginLeft: 'auto' }}>{formatDuration(elapsed)}</span>
             </div>
-            {segmentAlert && <p style={{ color: 'var(--orange)', fontWeight: 700 }}>{segmentAlert}</p>}
+            {segmentAlert && <p style={{ color: 'var(--accent)', fontWeight: 700 }}>{segmentAlert}</p>}
             <div className="rec-stats">
               <div className="rec-stat">
                 <div className="v">{formatDistance(distance, unit)}</div>

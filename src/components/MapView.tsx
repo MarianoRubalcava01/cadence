@@ -74,7 +74,7 @@ export default function MapView({
 
     if (points.length > 0) {
       const latlngs = points.map((p) => L.latLng(p.lat, p.lng))
-      L.polyline(latlngs, { color: '#fc4c02', weight: 4 }).addTo(layer)
+      L.polyline(latlngs, { color: '#0089ff', weight: 4 }).addTo(layer)
       L.circleMarker(latlngs[0], { radius: 6, color: '#16a34a', fillColor: '#16a34a', fillOpacity: 1 }).addTo(layer)
       L.circleMarker(latlngs[latlngs.length - 1], { radius: 6, color: '#dc2626', fillColor: '#dc2626', fillOpacity: 1 }).addTo(layer)
       points.forEach(pushBounds)
@@ -83,15 +83,15 @@ export default function MapView({
       if (route.length < 2) return
       L.polyline(
         route.map((p) => L.latLng(p.lat, p.lng)),
-        { color: '#fc4c02', weight: 3, opacity: 0.45 },
+        { color: '#0089ff', weight: 3, opacity: 0.45 },
       ).addTo(layer)
       route.forEach(pushBounds)
     })
     waypoints.forEach((w, i) => {
       L.circleMarker(L.latLng(w.lat, w.lng), {
         radius: 7,
-        color: '#fc4c02',
-        fillColor: '#fc4c02',
+        color: '#0089ff',
+        fillColor: '#0089ff',
         fillOpacity: 1,
       })
         .bindTooltip(String(i + 1), { permanent: true, direction: 'top', offset: [0, -8] })
@@ -135,7 +135,7 @@ export function RouteSparkline({ points }: { points: { lat: number; lng: number 
     .join(' ')
   return (
     <svg viewBox={`0 0 ${w} ${h}`} width="100%" height="110" style={{ display: 'block', background: '#eef1f4' }}>
-      <path d={path} fill="none" stroke="#fc4c02" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
+      <path d={path} fill="none" stroke="#0089ff" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
     </svg>
   )
 }

@@ -89,7 +89,7 @@ secure context, so recording works locally; on a phone, use the deployed HTTPS U
 src/
   main.tsx            entry point
   App.tsx             auth gate, navigation, theme/unit toggles
-  index.css           Strava-orange, mobile-first styles
+  index.css           Cadence-blue, mobile-first styles
   lib/
     supabase.ts       client (env vars only, never hardcoded keys)
     types.ts          shared types, 30+ sports, MET table
