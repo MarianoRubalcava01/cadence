@@ -106,7 +106,7 @@ export default function ActivitiesView({ userId, unit }: Props) {
         </button>
         <button
           className="btn secondary"
-          onClick={() => downloadCSV('strava-plus-activities.csv', activitiesToCSV(activities))}
+          onClick={() => downloadCSV('cadence-activities.csv', activitiesToCSV(activities))}
           disabled={activities.length === 0}
         >
           Export CSV

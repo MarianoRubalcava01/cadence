@@ -48,7 +48,7 @@ export default function AuthView() {
       <main className="main" style={{ maxWidth: 440, margin: '0 auto', width: '100%' }}>
         <div className="center" style={{ margin: '32px 0 20px' }}>
           <div className="logo" style={{ fontSize: 34 }}>
-            Strava<span> Plus</span>
+            Cadence
           </div>
           <p className="muted">Record, compete, and train together. Real athletes, real leaderboards.</p>
         </div>

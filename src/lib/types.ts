@@ -1,4 +1,4 @@
-// Shared types for Strava Plus (real multi-user app, Supabase backend)
+// Shared types for Cadence (real multi-user app, Supabase backend)
 
 export type Privacy = 'public' | 'followers' | 'only_me'
 export type Unit = 'km' | 'mi'

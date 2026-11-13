@@ -86,7 +86,7 @@ export default function BeaconView({ sessionId }: { sessionId: string }) {
     <div className="app">
       <header className="header">
         <div className="logo">
-          Strava<span> Plus</span> Beacon
+          Cadence Beacon
         </div>
       </header>
       <main className="main">

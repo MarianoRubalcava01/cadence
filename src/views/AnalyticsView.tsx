@@ -151,7 +151,7 @@ export default function AnalyticsView({ userId, unit }: Props) {
   const yearHours = yearActs.reduce((s, a) => s + a.moving_time_s, 0) / 3600
   const yearClimb = yearActs.reduce((s, a) => s + a.elevation_gain_m, 0)
 
-  // AI Plus Coach: rule-based insights computed from real totals.
+  // Cadence Coach: rule-based insights computed from real totals.
   const coachTips: string[] = []
   const thisWeekKm = weeklyDistM / 1000
   const lastWeekKm = lastWeek.reduce((s, a) => s + a.distance_m, 0) / 1000
@@ -222,14 +222,14 @@ export default function AnalyticsView({ userId, unit }: Props) {
           </div>
 
           <div className="card">
-            <h2>Plus Coach</h2>
+            <h2>Cadence Coach</h2>
             {coachTips.map((tip, i) => (
               <p key={i} style={{ margin: '0 0 8px' }}>💡 {tip}</p>
             ))}
           </div>
 
           <div className="card">
-            <h2>Plus Analytics</h2>
+            <h2>Cadence Analytics</h2>
             <div className="grid3">
               <div className="stat"><div className="value">{score}</div><div className="label">Fitness Score</div></div>
               <div className="stat"><div className="value">{ff.ctl}</div><div className="label">Fitness (CTL)</div></div>

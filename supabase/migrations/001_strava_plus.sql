@@ -1,4 +1,4 @@
--- Strava Plus — initial schema (Supabase / Postgres)
+-- Cadence — initial schema (Supabase / Postgres)
 -- Run once in the Supabase SQL Editor (or: supabase db push).
 -- Seeds NOTHING: no mock users, no sample activities. Every new account starts empty.
 

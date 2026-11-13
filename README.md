@@ -1,4 +1,4 @@
-# Strava Plus — real multi-user fitness app
+# Cadence — real multi-user fitness app
 
 A complete, deployable Strava-style web app: live GPS recording, a real social feed
 with kudos and comments, segments and leaderboards, route planning, training analytics,
@@ -19,7 +19,7 @@ Leaflet + OpenStreetMap for maps, deployable to Vercel.
    Realtime for Beacon.
    - The migration is idempotent for policies and Realtime; re-running it is safe.
 3. Auth settings (Authentication → URL Configuration):
-   - **Site URL:** your deployed app URL (for example `https://strava-plus.vercel.app`).
+   - **Site URL:** your deployed app URL (for example `https://cadence-chi-bice.vercel.app`).
      Add `http://localhost:5173` as an additional redirect URL for local development.
    - Email confirmations are on by default. New sign-ups must confirm their email before
      signing in. You can turn confirmation off under Authentication → Providers → Email
@@ -32,7 +32,7 @@ Leaflet + OpenStreetMap for maps, deployable to Vercel.
 ## 2. Run locally
 
 ```bash
-cd strava-plus-app
+cd cadence
 cp .env.example .env
 # edit .env with your real Supabase URL and anon key
 npm install
@@ -69,7 +69,7 @@ secure context, so recording works locally; on a phone, use the deployed HTTPS U
 | Clubs | Create/join clubs, member lists, club feed, 4-week distance leaderboard. |
 | Gear | Gear locker; mileage accumulates from assigned activities; retirement progress and warnings. |
 | Beacon | During a recording, share a live link. Anyone with the link watches your position update in real time via Supabase Realtime — no sign-in needed to view. |
-| Plus | Weekly goal ring, day streak, 14-day grid, Plus Analytics (Fitness Score, sport breakdown, PRs), AI Plus Coach (rule-based insights computed from your real totals), km/mi toggle, light/dark themes. |
+| Plus | Weekly goal ring, day streak, 14-day grid, Cadence Analytics (Fitness Score, sport breakdown, PRs), Cadence Coach (rule-based insights computed from your real totals), km/mi toggle, light/dark themes. |
 
 ## What the app cannot do on its own
 
@@ -104,7 +104,7 @@ src/
     FeedView.tsx      everyone / following feed
     RecordView.tsx    live GPS recording + Beacon + live segments
     ActivitiesView.tsx  my log, manual entry, photos, CSV export
-    AnalyticsView.tsx   Plus Analytics, training log, Year in Sport, heatmap
+    AnalyticsView.tsx   Cadence Analytics, training log, Year in Sport, heatmap
     SegmentsView.tsx  create segments, leaderboards, Local Legend
     RoutesView.tsx    planner, OSRM snap, suggested loops, saved routes
     ChallengesView.tsx  monthly challenges

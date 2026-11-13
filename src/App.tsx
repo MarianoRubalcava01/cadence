@@ -50,7 +50,7 @@ function SetupScreen() {
   return (
     <div className="setup">
       <h1>
-        Strava<span style={{ color: '#fc4c02' }}> Plus</span> needs setup
+        Cadence needs setup
       </h1>
       <p>
         This app talks to a Supabase project for accounts, activities, and live tracking. No keys are
@@ -147,7 +147,7 @@ export default function App() {
 
   if (beaconId) return <BeaconView sessionId={beaconId} />
   if (!isConfigured) return <SetupScreen />
-  if (!authReady) return <p className="muted center" style={{ marginTop: 60 }}>Loading Strava Plus...</p>
+  if (!authReady) return <p className="muted center" style={{ marginTop: 60 }}>Loading Cadence...</p>
   if (!sessionUserId) return <AuthView />
 
   async function signOut() {
@@ -162,7 +162,7 @@ export default function App() {
     <div className="app">
       <header className="header">
         <button className="logo" style={{ background: 'none', border: 'none', padding: 0 }} onClick={() => setView('home')}>
-          Strava<span> Plus</span>
+          Cadence
         </button>
         <div className="spacer" />
         <button className="icon-btn" onClick={() => setUnit(unit === 'km' ? 'mi' : 'km')} title="Toggle km / mi">
